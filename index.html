@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <title>QR Code Generator</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Speak Your Mind: QR Code Edition</h1>
+      <h4>Create a QR code that has any message of your choice!</h4>
+      <div v-if="loading">
+        <p>Loading...</p>
+      </div>
+      <div v-else>
+          <div class="card details" style="width: 30rem;">
+            <img class="card-img-top" v-bind:src='image'>
+            <div class="card-body">
+              <h2>Want to make your own QR code?</h2>
+              <form v-on:submit.prevent="generateQrCode">
+                <div class="form-group">
+                  <label>Enter your custom QR code message below</label>
+                  <input type="text" class="form-control" placeholder="Enter message here" v-model="message">
+                  <small class="form-text text-muted">You can download the QR code image above and send it to someone.</small>
+                  <small class="form-text text-muted">For research purposes *wink* what else?</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Generate QR code</button>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    <div class="footer">
+      <p>
+        <a href="https://github.com/ammon-mugimu/Creative-project-3--Vue.js">
+          <i class="fab fa-github" style="font-size: 30px;"></i>
+        </a>
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+  </body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: #f3f3f3;
+    background-image: url(Elegant_Background-7.jpg)
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(28, 36, 58);
+    text-align: center;
+    font-weight: bold;
+    align-content: center;
+}
+
+.details {
+    align-content: center;
+    text-align: center;
+    background-color: rgb(28, 36, 58);
+}
+
+#app {
+    margin-bottom:10%;
+}
+
